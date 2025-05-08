@@ -1,0 +1,120 @@
+package com.example.backend.persistence;
+
+import jakarta.persistence.*;
+
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "memory_ram")
+public class MemoryRamEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private String name;
+    private String brand;
+
+    @Column(name = "part_number")
+    private String partNumber;
+
+    private BigDecimal price;
+
+    @Column(name = "form_factor")
+    private String formFactor;
+
+    private String modules;
+    private String frequency;
+    private String capacity;
+    private Integer stock;
+
+    public MemoryRamEntity() {
+    }
+
+    public MemoryRamEntity(String name, String brand, String partNumber, BigDecimal price, String formFactor, String modules, String frequency, String capacity, Integer stock) {
+        this.name = name;
+        this.brand = brand;
+        this.partNumber = partNumber;
+        this.price = price;
+        this.formFactor = formFactor;
+        this.modules = modules;
+        this.frequency = frequency;
+        this.capacity = capacity;
+        this.stock = stock;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getPartNumber() {
+        return partNumber;
+    }
+
+    public void setPartNumber(String partNumber) {
+        this.partNumber = partNumber;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public String getFormFactor() {
+        return formFactor;
+    }
+
+    public void setFormFactor(String formFactor) {
+        this.formFactor = formFactor;
+    }
+
+    public String getModules() {
+        return modules;
+    }
+
+    public void setModules(String modules) {
+        this.modules = modules;
+    }
+
+    public String getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(String frequency) {
+        this.frequency = frequency;
+    }
+
+    public String getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(String capacity) {
+        this.capacity = capacity;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+}
